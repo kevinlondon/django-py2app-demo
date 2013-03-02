@@ -27,7 +27,7 @@ def add_path_tree( base_path, path, skip_dirs=[ '.svn', '.git' ]):
 
 
 APP = ['demosite.py']
-DATA_FILES = []
+DATA_FILES = ['static']
 OPTIONS = {'argv_emulation': True, 'packages':["django"]}
 
 py2app_options = {
@@ -45,6 +45,7 @@ py2app_options = {
       'demosite.urls',
       'manage',
       'demosite.settings',
+      'demosite.views',
       'celery',
       ########
       # mass django import
@@ -74,6 +75,7 @@ py2app_options = {
       'django.template.defaultfilters',
       'django.template.loader_tags',
       'django.contrib.admin.urls',
+      'django.contrib.staticfiles',
       'django.conf.urls.defaults',
       'django.contrib.admin.views.main',
       'django.core.context_processors',
