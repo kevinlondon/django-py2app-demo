@@ -1,0 +1,28 @@
+# Debug
+debug: True
+template_debug: DEBUG
+
+# Database
+# postgresql_psycopg2, postgresql, mysql, sqlite3 or oracle.
+database_engine: sqlite3
+database_name: db/demosite.db
+database_user:
+database_password:
+# set database_host to empty string for localhost, not used with sqlite3.
+database_host:
+database_port:
+
+# local time zone for this installation. choices can be found here:
+# http://en.wikipedia.org/wiki/list_of_tz_zones_by_name
+# although not all choices may be available on all operating systems.
+# if running in a windows environment this must be set to the same as your
+# system time zone.
+time_zone: Australia/Melbourne
+
+# language code for this installation. all choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html
+language_code: en-us
+
+# Web Server
+start_url: http://localhost/admin/
+web_server_port: 80
