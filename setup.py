@@ -123,7 +123,7 @@ py2app_options = {
       'html5lib',
       'HTMLParser',
     ],
-    'packages':["django",]
+    'packages':["django",],
 }
 
 # Take the first value from the environment variable PYTHON_PATH
@@ -134,10 +134,11 @@ py2app_data_files = []
 
 # django admin files
 py2app_data_files += add_path_tree( django_admin_path, 'templates' )
-py2app_data_files += add_path_tree( django_admin_path, 'media' )
+py2app_data_files += add_path_tree( django_admin_path, 'static' )
 # project files
 py2app_data_files += add_path_tree( '', 'db' )
 py2app_data_files += add_path_tree( '', 'templates' )
+py2app_data_files += add_path_tree( '', 'static' )
 
 setup(
     app=APP,

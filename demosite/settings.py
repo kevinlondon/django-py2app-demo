@@ -107,8 +107,9 @@ INSTALLED_APPS = (
 
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
 MEDIA_URL = '/site_media/'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, MEDIA_URL.strip("/"))
+MEDIA_ROOT = os.path.realpath(os.path.join(os.pardir, "Resources", MEDIA_URL.strip("/")))
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = os.path.realpath(os.path.join(os.pardir, "Resources", STATIC_URL.strip("/")))

@@ -114,6 +114,11 @@ def main(**kwargs):
 if __name__ == '__main__':
     import argparse
 
+    from django.conf import settings
+    print settings.STATIC_URL
+    print settings.STATIC_ROOT
+    print settings.MEDIA_URL
+
     parser = argparse.ArgumentParser(prog='cherrypy_server',
         description='Starts a CherryPy web server for a Django application.')
     parser.add_argument('netloc', default='localhost:8000',
